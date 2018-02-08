@@ -46,7 +46,7 @@ public class Servlet_02 extends HttpServlet {
 		char[] charArray=binary.toCharArray();
 		for(int i=charArray.length-1;i>=0;i--) {
 			if ((charArray[i]=='0') || (charArray[i]=='1')) {
-				answer = (int) Math.pow(2, charArray.length-i-1);
+				answer = answer + (Character.getNumericValue((charArray[i])) * (int) Math.pow(2, charArray.length-i-1));
 			} else {
 				return -1;
 			}
